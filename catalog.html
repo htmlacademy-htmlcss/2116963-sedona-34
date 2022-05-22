@@ -41,8 +41,85 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main-catalog">
+    <h1 class="catalog-title">Гостиницы Седоны</h1>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="index.html">
+          <span class="visually-hidden">Главная</span>
+        </a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link">Гостиницы</a>
+      </li>
+    </ul>
 
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтры каталога</h2>
+      <form class="filters-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="filters-group">
+          <legend class="filters-title">Инфраструктура:</legend>
+          <ul class="filters-list">
+            <li class="filters-item">
+              <label class="control">
+                <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                Бассейн
+              </label>
+            </li>
+            <li>
+              <label class="control">
+                <input class="control-input" type="checkbox" name="parking" checked>
+                Парковка
+              </label>
+            </li>
+            <li>
+              <label class="control">
+                <input class="control-input" type="checkbox" name="wi-fi">
+                Wi-Fi
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filters-group">
+          <legend class="filters-title">Тип Жилья:</legend>
+          <ul class="filters-list">
+            <li class="filters-item">
+              <label class="control">
+                <input class="control-input" type="radio" name="housing" value="hotel" checked>
+                Гостиница
+              </label>
+            </li>
+            <li>
+              <label class="control">
+                <input class="control-input" type="radio" name="housing" value="motel">
+                Мотель
+              </label>
+            </li>
+            <li>
+              <label class="control">
+                <input class="control-input" type="radio" name="housing" value="apartments">
+                Апартаменты
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filters-group">
+          <legend class="filters-title">Стоимость, ₽:</legend>
+          <ul class="filters-list">
+            <li class="filters-item">
+              <label class="visually-hidden" for="price-from">От:</label>
+              <input class="input-from" type="text" id="price-from" name="price-from" value="0" placeholder="от">
+            </li>
+            <li class="filters-item">
+              <label class="visually-hidden" for="price-to">До:</label>
+              <input class="input-from" type="text" id="price-to" name="price-to" value="9000" placeholder="до">
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button button-blue" type="submit">Применить</button>
+        <button class="button-transparent" type="reset">Сбросить</button>
+      </form>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -50,7 +127,7 @@
       <h2 class="mailing-title">Подпишитесь на рассылку</h2>
       <p class="mailing-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="mailing-email">Email:</label>
+        <label for="visually-hidden">Email:</label>
         <input class="mailing-field" type="email" id="mailing-email" name="mailing-email" placeholder="Ваш e-mail"
           required>
         <button class="mailing-btn" type="submit">Подписаться</button>
@@ -63,17 +140,17 @@
         <h3 class="visually-hidden">Социальные сети</h3>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link" href="#">
+            <a class="social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="#">
+            <a class="social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="#">
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
