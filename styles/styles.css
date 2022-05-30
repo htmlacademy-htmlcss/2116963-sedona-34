@@ -1,21 +1,97 @@
 @font-face {
+  font-display: swap;
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
 }
 
 @font-face {
+  font-display: swap;
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
 }
 
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+}
+
+/* * Navigation */
+
+.navigation-list-link {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+/* * Buttons */
+
+.btn {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-small {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.btn-large {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.btn-brown {
+  background-color: #756157;
+}
+
+.btn-blue {
+  background-color: #82B3D3;
+}
+
+/* * Welcome */
+
+.welcome {
+  background: #82B3D3 url("../images/background/welcome-background.jpg") 0 0/cover no-repeat;
+  text-align: center;
+}
+
+/* * Section */
+
+.section {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.section-decoration {
+  background: #82B3D3 url("../images/background/mailing-background.jpg") 0 0/cover no-repeat;
+}
+
+/* * Contacts */
+
+.phone-number {
+  color: #000;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
