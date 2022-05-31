@@ -15,9 +15,15 @@
 }
 
 body {
+  color: #333333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* * Navigation */
@@ -33,30 +39,20 @@ body {
 /* * Buttons */
 
 .btn {
+  background-color: #756157;
   color: #fff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.btn-small {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-}
-
 .btn-large {
   font-size: 20px;
-  font-weight: 700;
   line-height: 36px;
-}
-
-.btn-brown {
-  background-color: #756157;
-}
-
-.btn-blue {
-  background-color: #82B3D3;
 }
 
 /* * Welcome */
@@ -75,6 +71,7 @@ body {
 }
 
 .section-title {
+  color: #000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -85,6 +82,25 @@ body {
   background: #82B3D3 url("../images/background/mailing-background.jpg") 0 0/cover no-repeat;
 }
 
+/* * Advantages */
+
+.advantages-content {
+  text-align: center;
+}
+
+.advantages-content-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-inner .advantages-content,
+.advantages-inner .advantages-content-title {
+  color: #fff;
+}
+
 /* * Contacts */
 
 .phone-number {
@@ -93,5 +109,22 @@ body {
   line-height: 40px;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+/* * Background Colors */
+
+.blue {
+  background-color: #82B3D3;
+}
+
+.green {
+  background-color: #7DB54F;
+}
+
+.blue-transparent-012 {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.blue-transparent-02 {
+  background: rgba(131, 179, 211, 0.2);
 }
