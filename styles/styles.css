@@ -101,6 +101,16 @@ img {
   color: #fff;
 }
 
+/* * Mailing */
+
+.mailing-field {
+  background-color: #F2F2F2;
+}
+
+.mailing-field::placeholder {
+  color: #000;
+}
+
 /* * Contacts */
 
 .phone-number {
@@ -111,7 +121,71 @@ img {
   text-decoration: none;
 }
 
-/* * Background Colors */
+/* * Page intro (filter) */
+
+.page-intro {
+  background: #82B3D3 url("../images/background/page-intro-background.jpg") 0 0/cover no-repeat;
+  color: #fff;
+}
+
+.page-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.breadcrumbs-link {
+  color: #fff;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.btn-reset {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* * Filter result */
+
+.catalog-sorting-text {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.catalog-card-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.catalog-card-rating {
+  background-color: #F2F2F2;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* * Pagination */
+
+.btn-pagination-current {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+/* * Background colors */
 
 .blue {
   background-color: #82B3D3;
