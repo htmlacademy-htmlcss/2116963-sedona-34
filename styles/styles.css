@@ -106,8 +106,7 @@ img {
   color: #000;
 }
 
-.advantages-inner .advantages-content,
-.advantages-inner .advantages-content-description {
+.advantages-content.blue>* {
   color: #fff;
 }
 
