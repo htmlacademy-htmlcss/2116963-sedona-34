@@ -15,7 +15,6 @@
 }
 
 body {
-  color: #333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -41,11 +40,9 @@ img {
 .btn {
   background-color: #756157;
   color: #fff;
-  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -65,17 +62,20 @@ img {
 /* * Section */
 
 .section {
-  font-size: 22px;
-  line-height: 26px;
   text-align: center;
 }
 
 .section-title {
-  color: #000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.section-description {
+  color: #333;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .section-decoration {
@@ -83,7 +83,7 @@ img {
   color: #fff;
 }
 
-.section-decoration .section-title {
+.section-decoration .section-description {
   color: #fff;
 }
 
@@ -94,15 +94,18 @@ img {
 }
 
 .advantages-content-title {
-  color: #000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
 }
 
+.advantages-content-description {
+  color: #333;
+}
+
 .advantages-inner .advantages-content,
-.advantages-inner .advantages-content-title {
+.advantages-inner .advantages-content-description {
   color: #fff;
 }
 
@@ -112,17 +115,12 @@ img {
   background-color: #F2F2F2;
 }
 
-.mailing-field::placeholder {
-  color: #000;
-}
-
 /* * Contacts */
 
 .phone-number {
   color: #000;
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -142,7 +140,6 @@ img {
 .breadcrumbs-link {
   color: #fff;
   font-size: 16px;
-  line-height: 21px;
 }
 
 .catalog-filter-title {
@@ -162,7 +159,6 @@ img {
 /* * Filter result */
 
 .catalog-sorting-text {
-  color: #000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -170,14 +166,19 @@ img {
 }
 
 .catalog-card-title {
-  color: #000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
 }
 
+.catalog-card-type,
+.catalog-card-price {
+  color: #333;
+}
+
 .catalog-card-rating {
   background-color: #F2F2F2;
+  color: #333;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -188,6 +189,13 @@ img {
 .btn-pagination-current {
   background-color: #F2F2F2;
   color: #000;
+}
+
+/* * Select control */
+
+.select-control,
+.catalog-pages-number {
+  color: #333;
 }
 
 /* * Background colors */
