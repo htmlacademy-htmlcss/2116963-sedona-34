@@ -15,6 +15,7 @@
 }
 
 body {
+  color: #333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -66,6 +67,7 @@ img {
 }
 
 .section-title {
+  color: #000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -73,7 +75,6 @@ img {
 }
 
 .section-description {
-  color: #333;
   font-size: 22px;
   line-height: 26px;
 }
@@ -83,7 +84,7 @@ img {
   color: #fff;
 }
 
-.section-decoration .section-description {
+.section-decoration .section-title {
   color: #fff;
 }
 
@@ -94,14 +95,15 @@ img {
 }
 
 .advantages-content-title {
+  color: #000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
 }
 
-.advantages-content-description {
-  color: #333;
+.advantages-content-number {
+  color: #000;
 }
 
 .advantages-inner .advantages-content,
@@ -113,6 +115,11 @@ img {
 
 .mailing-field {
   background-color: #F2F2F2;
+}
+
+.mailing-field::placeholder {
+  color: #000;
+  opacity: 0.6;
 }
 
 /* * Contacts */
@@ -159,6 +166,7 @@ img {
 /* * Filter result */
 
 .catalog-sorting-text {
+  color: #000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -166,19 +174,14 @@ img {
 }
 
 .catalog-card-title {
+  color: #000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
 }
 
-.catalog-card-type,
-.catalog-card-price {
-  color: #333;
-}
-
 .catalog-card-rating {
   background-color: #F2F2F2;
-  color: #333;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -193,9 +196,8 @@ img {
 
 /* * Select control */
 
-.select-control,
-.catalog-pages-number {
-  color: #333;
+.select-control {
+  color: inherit;
 }
 
 /* * Background colors */
