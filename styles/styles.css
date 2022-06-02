@@ -40,6 +40,7 @@ img {
 
 .btn {
   background-color: #756157;
+  font-family: inherit;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -51,6 +52,14 @@ img {
 .btn-large {
   font-size: 20px;
   line-height: 36px;
+}
+
+.btn-second {
+  background-color: #82B3D3;
+}
+
+.btn-selected {
+  background-color: #7DB54F;
 }
 
 /* * Welcome */
@@ -106,7 +115,19 @@ img {
   color: #000;
 }
 
-.advantages-content.blue>* {
+.advantages-background-blue {
+  background-color: #82B3D3;
+}
+
+.advantages-background-blue-012 {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-background-blue-02 {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-white-text {
   color: #fff;
 }
 
@@ -114,6 +135,8 @@ img {
 
 .mailing-field {
   background-color: #F2F2F2;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .mailing-field::placeholder {
@@ -154,12 +177,19 @@ img {
   line-height: 26px;
 }
 
-.btn-reset {
+.reset-btn {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  color: #fff;
-  font-size: 16px;
-  line-height: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.catalog-filter-from,
+.catalog-filter-to {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 /* * Filter result */
@@ -188,7 +218,7 @@ img {
 
 /* * Pagination */
 
-.btn-pagination-current {
+.pagination-current {
   background-color: #F2F2F2;
   color: #000;
 }
@@ -196,23 +226,7 @@ img {
 /* * Select control */
 
 .select-control {
+  font-family: inherit;
+  font-size: inherit;
   color: inherit;
-}
-
-/* * Background colors */
-
-.blue {
-  background-color: #82B3D3;
-}
-
-.green {
-  background-color: #7DB54F;
-}
-
-.blue-transparent-012 {
-  background: rgba(131, 179, 211, 0.12);
-}
-
-.blue-transparent-02 {
-  background: rgba(131, 179, 211, 0.2);
 }
