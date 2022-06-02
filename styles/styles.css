@@ -26,6 +26,13 @@ img {
   object-fit: contain;
 }
 
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
 /* * Navigation */
 
 .navigation-list-link {
@@ -40,7 +47,6 @@ img {
 
 .btn {
   background-color: #756157;
-  font-family: inherit;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -135,8 +141,6 @@ img {
 
 .mailing-field {
   background-color: #F2F2F2;
-  font-family: inherit;
-  font-size: inherit;
 }
 
 .mailing-field::placeholder {
@@ -178,7 +182,7 @@ img {
 }
 
 .reset-btn {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: none;
   font-weight: 400;
   text-transform: capitalize;
@@ -186,10 +190,15 @@ img {
 
 .catalog-filter-from,
 .catalog-filter-to {
-  background-color: rgba(0, 0, 0, 0);
-  font-family: inherit;
-  font-size: inherit;
+  background-color: transparent;
   color: inherit;
+}
+
+.catalog-filter-from::placeholder,
+.catalog-filter-to::placeholder {
+  color: #fff;
+  opacity: 0.3;
+  text-align: right;
 }
 
 /* * Filter result */
@@ -226,7 +235,5 @@ img {
 /* * Select control */
 
 .select-control {
-  font-family: inherit;
-  font-size: inherit;
   color: inherit;
 }
