@@ -19,6 +19,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  background-color: #F2F2F2;
 }
 
 img {
@@ -31,6 +32,13 @@ input,
 select {
   font-family: inherit;
   font-size: 100%;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 /* * Navigation */
@@ -172,12 +180,12 @@ select {
   text-transform: capitalize;
 }
 
-.range-input-text {
+.catalog-filter-price-text {
   background-color: transparent;
   color: inherit;
 }
 
-.range-input-text::placeholder {
+.catalog-filter-price-text::placeholder {
   color: #fff;
   opacity: 0.3;
   text-align: right;
