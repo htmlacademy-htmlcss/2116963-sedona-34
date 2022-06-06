@@ -40,6 +40,19 @@ select {
   font-size: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-wrapper {
   min-height: 100%;
   max-width: 1200px;
@@ -51,6 +64,31 @@ select {
 }
 
 /* * Navigation (Header) */
+
+.navigation {
+  display: flex;
+  padding: 0 70px;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.navigation-list,
+.navigation-user {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list {
+  width: 400px;
+}
+
+.navigation-user {
+  width: 270px;
+  margin-left: auto;
+}
 
 .navigation-list-link {
   color: #000;
@@ -94,7 +132,8 @@ select {
 /* * Welcome */
 
 .welcome {
-  background: #82B3D3 url("../images/background/welcome-background.jpg") 0 0/cover no-repeat;
+  background: url("../images/welcome/welcome-devider.svg") 0 100%/100% auto no-repeat,
+  url("../images/background/welcome-background.jpg") 0 0/cover no-repeat, #82B3D3;
   text-align: center;
 }
 
@@ -110,6 +149,8 @@ select {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  width: 620px;
+  margin: 0 auto;
 }
 
 .section-description {
