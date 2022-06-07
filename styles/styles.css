@@ -113,6 +113,11 @@ select {
   background-color: #7DB54F;
 }
 
+.btn-disabled {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
 /* * Main */
 
 .main-container {
@@ -159,7 +164,7 @@ select {
 
 .advantages-list {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -293,12 +298,15 @@ select {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+  padding: 0;
 }
 
 .catalog-filter-price-number {
   background-color: transparent;
   color: inherit;
   width: 130px;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-price-number::placeholder {
@@ -322,12 +330,43 @@ select {
 
 /* * Filter result */
 
+.filter-result {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.catalog-sorting {
+  display: flex;
+  align-items: center;
+}
+
 .catalog-sorting-text {
   color: #000;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 191px 0 0;
+}
+
+.catalog-sorting .select-control {
+  width: 290px;
+}
+
+
+.sorting-display {
+  list-style: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+/* * Cards */
+
+.catalog-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-card-title {
@@ -344,17 +383,40 @@ select {
   text-transform: uppercase;
 }
 
+.catalog-divider {
+  border: 1px solid #E6E6E6;
+}
+
 /* * Pagination */
 
-.pagination-current {
-  background-color: #F2F2F2;
-  color: #000;
+.catalog-pages {
+  display: flex;
+  align-items: center;
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* * Select control */
 
+.catalog-pages-number {
+  margin: 0 51px 0 auto;
+}
+
+.catalog-pages .select-control {
+  width: 160px;
+}
+
 .select-control {
   color: inherit;
+  height: 48px;
 }
 
 /* * Utility colors */
