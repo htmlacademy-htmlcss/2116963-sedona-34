@@ -40,18 +40,7 @@ select {
   font-size: 100%;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+/* * */
 
 .page-wrapper {
   min-height: 100%;
@@ -67,7 +56,8 @@ select {
 
 .navigation {
   display: flex;
-  padding: 0 70px;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -149,8 +139,6 @@ select {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  width: 620px;
-  margin: 0 auto;
 }
 
 .section-description {
@@ -169,7 +157,27 @@ select {
 
 /* * Advantages */
 
+.advantages-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-inner {
+  display: flex;
+}
+
 .advantages-content {
+  width: 400px;
+  height: 384px;
+  display: flex;
+}
+
+.advantages-texts {
+  width: 230px;
+  margin: auto;
   text-align: center;
 }
 
@@ -179,6 +187,7 @@ select {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .advantages-content-number {
@@ -198,6 +207,20 @@ select {
 
 /* * Contacts */
 
+.contacts-container {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 142px;
+}
+
 .phone-number {
   color: #000;
   font-size: 40px;
@@ -212,21 +235,76 @@ select {
   color: #fff;
 }
 
+.page-intro-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .page-title {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
 }
 
 .breadcrumbs-link {
   color: #fff;
   font-size: 16px;
+  text-decoration: none;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-set {
+  display: flex;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-group-first {
+  margin-right: 70px;
+}
+
+.catalog-filter-range{
+  width: 290px;
+}
+
+.catalog-filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
+}
+
+.catalog-filter-price-number {
+  background-color: transparent;
+  color: inherit;
+  width: 130px;
+}
+
+.catalog-filter-price-number::placeholder {
+  color: #fff;
+  opacity: 0.3;
+  text-align: right;
 }
 
 .reset-btn {
@@ -236,15 +314,10 @@ select {
   text-transform: capitalize;
 }
 
-.catalog-filter-price-number {
-  background-color: transparent;
-  color: inherit;
-}
-
-.catalog-filter-price-number::placeholder {
-  color: #fff;
-  opacity: 0.3;
-  text-align: right;
+.catalog-filter-buttons {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* * Filter result */
