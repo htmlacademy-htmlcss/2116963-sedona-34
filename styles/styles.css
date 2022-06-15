@@ -271,9 +271,13 @@ select {
   height: 60px;
 }
 
-.mailing-field:placeholder-shown {
+.mailing-field::placeholder {
   color: #000;
   opacity: 0.6;
+  text-indent: 22px;
+}
+
+.mailing-field:placeholder-shown {
   text-indent: 22px;
 }
 
