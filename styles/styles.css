@@ -145,13 +145,13 @@ select {
   line-height: 26px;
   text-decoration: none;
   height: 100%;
-  padding: 20px 0 19px 0;
-  margin: 0 17px;
+  padding: 20px 10px 19px;
+  margin: 0 7px;
   min-width: 42px;
   text-align: center;
 }
 
-.navigation-list-link-current {
+.navigation-list-link-current .navigation-list-link-inner {
   padding-bottom: 16px;
   border-bottom: 3px solid #756257;
 }
@@ -187,18 +187,18 @@ select {
 .welcome {
   background: url("../images/welcome/welcome-devider.svg") 0 100%/100% auto no-repeat,
     url("../images/background/welcome-background.jpg") 0 0/cover no-repeat, #82B3D3;
+  padding: 51px 0 82px;
 }
 
 .welcome-image {
   display: block;
   margin: 0 auto;
-  padding: 51px 0 82px;
 }
 
 /* * Section */
 
 .section {
-  padding: 63px 0;
+  padding: 63px 0 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,18 +210,18 @@ select {
 }
 
 .section-interest {
-  padding-top: 91px;
+  padding: 91px 0 92px;
 }
 
-.section-decoration {
-  padding-top: 94px;
+.section-mailing {
+  padding: 94px 0;
 }
 
 .section-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 654px;
+  max-width: 658px;
   text-align: center;
 }
 
@@ -237,12 +237,12 @@ select {
 .section-description {
   font-size: 22px;
   line-height: 26px;
-  margin: 0 0 30px;
+  margin: 0;
 }
 
 .section-btn {
   width: 544px;
-  margin: 26px 0 30px;
+  margin-top: 56px;
 }
 
 .section-decoration {
@@ -259,7 +259,7 @@ select {
 .mailing {
   display: flex;
   justify-content: center;
-  margin: 15px 0 30px;
+  margin-top: 46px;
   width: 100%;
 }
 
@@ -271,10 +271,10 @@ select {
   height: 60px;
 }
 
-.mailing-field::placeholder {
+.mailing-field:placeholder-shown {
   color: #000;
   opacity: 0.6;
-  padding-left: 22px;
+  text-indent: 22px;
 }
 
 .mailing-btn {
@@ -401,13 +401,14 @@ select {
 .page-intro {
   background: #82B3D3 url("../images/background/page-intro-background.jpg") 0 0/cover no-repeat;
   color: #fff;
+  padding: 35px 0 70px;
 }
 
 .page-title {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0;
 }
 
@@ -415,24 +416,30 @@ select {
   list-style: none;
   margin: 0 0 40px 0;
   padding: 0;
+  display: flex;
 }
 
 .breadcrumbs-link {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
+  margin-right: 10px;
+  padding-left: 15px;
+}
+
+.breadcrumbs-link-first {
+  padding-left: 0;
 }
 
 .catalog-filter {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 50px;
+  gap: 50px;
 }
 
 .catalog-filter-set {
   display: flex;
-  margin-bottom: 70px;
 }
 
 .catalog-filter-group {
@@ -446,7 +453,15 @@ select {
 }
 
 .catalog-filter-range {
-  width: 290px;
+  width: 288px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .catalog-filter-list {
@@ -455,11 +470,8 @@ select {
   padding: 0;
 }
 
-.catalog-filter-title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .catalog-filter-price-number {
@@ -476,24 +488,37 @@ select {
   text-align: right;
 }
 
+.catalog-filter-buttons {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.submit-btn {
+  padding: 14px 15px;
+  margin-bottom: 11px;
+  border: none;
+}
+
 .reset-btn {
   background-color: transparent;
   border: none;
   font-weight: 400;
   text-transform: capitalize;
-}
-
-.catalog-filter-buttons {
-  width: 160px;
-  display: flex;
-  flex-direction: column;
+  padding-bottom: 0;
 }
 
 /* * Filter result */
 
+.catalog-container {
+  padding: 55px 0 25px 4px;
+}
+
 .catalog-sorting {
   display: flex;
   align-items: center;
+  margin: 0 0 56px;
 }
 
 .catalog-sorting-text {
@@ -515,7 +540,18 @@ select {
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 160px;
+  display: flex;
+}
+
+.sorting-display-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.sorting-display-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+  outline: 1px solid black;
 }
 
 /* * Cards */
@@ -576,6 +612,12 @@ select {
   margin-right: 8px;
 }
 
+.pagination-item .btn {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+}
+
 .catalog-pages-group {
   width: 386px;
   display: flex;
@@ -589,6 +631,10 @@ select {
 .select-control {
   color: inherit;
   height: 48px;
+}
+
+.select-control {
+  padding-left: 16px;
 }
 
 .catalog-pages .select-control {
