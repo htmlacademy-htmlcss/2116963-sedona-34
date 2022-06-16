@@ -295,10 +295,18 @@ select {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
 }
 
 .advantages-inner {
   display: flex;
+  width: 100%;
+}
+
+.advantages-item {
+  min-height: 384px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-item:not(.advantages-item-wide) {
@@ -318,11 +326,14 @@ select {
   overflow: hidden;
   object-fit: cover;
   object-position: right center;
+  height: inherit;
 }
 
 .advantages-content {
-  height: 384px;
   display: flex;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .advantages-content-container {
