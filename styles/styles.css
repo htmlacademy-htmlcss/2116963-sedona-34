@@ -301,6 +301,7 @@ select {
 .advantages-inner {
   display: flex;
   width: 100%;
+  min-height: 384px;
 }
 
 .advantages-item {
