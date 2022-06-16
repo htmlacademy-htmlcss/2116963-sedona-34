@@ -17,13 +17,15 @@
           </a>
           <ul class="navigation-list">
             <li class="navigation-list-item">
-              <a class="navigation-list-link" href="index.html">Главная</a>
+              <a class="navigation-list-link" href="index.html"><span
+                  class="navigation-list-link-inner">Главная</span></a>
             </li>
             <li class="navigation-list-item">
-              <a class="navigation-list-link" href="#">О Cедоне</a>
+              <a class="navigation-list-link" href="#"><span class="navigation-list-link-inner">О Cедоне</span></a>
             </li>
             <li class="navigation-list-item">
-              <a class="navigation-list-link navigation-list-link-current">Гостиницы</a>
+              <a class="navigation-list-link navigation-list-link-current"><span
+                  class="navigation-list-link-inner">Гостиницы</span></a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -43,13 +45,14 @@
           </ul>
         </nav>
       </header>
+
       <main class="page-main main-container">
         <div class="page-intro">
           <div class="inner-container">
             <h1 class="page-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">H
+                <a class="breadcrumbs-link breadcrumbs-link-first" href="index.html">H
                   <span class="visually-hidden">Главная</span>
                 </a>
               </li>
@@ -113,15 +116,17 @@
                 <div class="catalog-filter-set">
                   <fieldset class="catalog-filter-group catalog-filter-group-first catalog-filter-range">
                     <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                    <label class="visually-hidden" for="price-from">От:</label>
-                    <input class="catalog-filter-price-number" type="number" id="price-from" name="price-from" value="0"
-                      placeholder="от">
-                    <label class="visually-hidden" for="price-to">До:</label>
-                    <input class="catalog-filter-price-number" type="number" id="price-to" name="price-to" value="9000"
-                      placeholder="до">
+                    <div class="catalog-filter-price">
+                      <label class="visually-hidden" for="price-from">От:</label>
+                      <input class="catalog-filter-price-number" type="number" id="price-from" name="price-from" value="0"
+                        placeholder="от">
+                      <label class="visually-hidden" for="price-to">До:</label>
+                      <input class="catalog-filter-price-number" type="number" id="price-to" name="price-to" value="9000"
+                        placeholder="до">
+                    </div>
                   </fieldset>
                   <div class="catalog-filter-buttons">
-                    <button class="btn btn-second" type="submit">Применить</button>
+                    <button class="btn btn-second submit-btn" type="submit">Применить</button>
                     <button class="btn reset-btn" type="reset">Сбросить</button>
                   </div>
                 </div>
@@ -130,7 +135,7 @@
           </div>
         </div>
 
-        <section class="inner-container">
+        <section class="inner-container catalog-container">
           <h2 class="visually-hidden">Подходящие гостиницы</h2>
           <div class="catalog-sorting">
             <p class="catalog-sorting-text">Найдено гостиниц: 38</p>
@@ -142,17 +147,17 @@
             </select>
             <ul class="sorting-display">
               <li class="sorting-display-item">
-                <a class="btn-border-dark" href="#">T
+                <a class="btn-border-dark sorting-display-link" href="#">
                   <span class="visually-hidden">Таблица</span>
                 </a>
               </li>
-              <li class="sorting-display-item">S
-                <a class="btn-border-light" href="#">
+              <li class="sorting-display-item">
+                <a class="btn-border-light sorting-display-link" href="#">
                   <span class="visually-hidden">Слайды</span>
                 </a>
               </li>
-              <li class="sorting-display-item">L
-                <a class="btn-border-light" href="#">
+              <li class="sorting-display-item">
+                <a class="btn-border-light sorting-display-link" href="#">
                   <span class="visually-hidden">Список</span>
                 </a>
               </li>
@@ -238,9 +243,11 @@
         </section>
       </main>
       <footer class="page-footer">
-        <section class="section">
-          <h2 class="section-title">Подпишитесь на рассылку</h2>
-          <p class="section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <section class="section section-mailing">
+          <div class="section-container">
+            <h2 class="section-title">Подпишитесь на рассылку</h2>
+            <p class="section-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+          </div>
           <form class="mailing" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="mailing-email">Email:</label>
             <input class="mailing-field" type="email" id="mailing-email" name="mailing-email" placeholder="Ваш e-mail"
