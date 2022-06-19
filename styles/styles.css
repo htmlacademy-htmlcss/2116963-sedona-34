@@ -576,7 +576,8 @@ select {
   padding: 0 0 66px 0;
   border-bottom: 1px solid #E6E6E6;
   display: grid;
-  grid-template-columns: repeat(3, 340px);
+  grid-template-columns: repeat(auto-fit, 340px);
+  grid-auto-rows: 1fr;
   column-gap: 18px;
 }
 
@@ -584,7 +585,7 @@ select {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content auto repeat(3, min-content);
+  grid-template-rows: 211px auto repeat(3, min-content);
   gap: 16px 20px;
   align-items: center;
 }
