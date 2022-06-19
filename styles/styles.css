@@ -268,7 +268,6 @@ select {
   border: none;
   border-radius: 10px 0 0 10px;
   width: 50%;
-  height: 60px;
 }
 
 .mailing-field::placeholder {
@@ -325,9 +324,7 @@ select {
 .advantages-image {
   width: calc(100% / 3 * 2);
   overflow: hidden;
-  object-fit: cover;
-  object-position: right center;
-  height: inherit;
+  object-fit: contain;
 }
 
 .advantages-content {
