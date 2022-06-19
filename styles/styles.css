@@ -66,6 +66,7 @@ select {
   text-decoration: none;
   text-transform: uppercase;
   padding: 9px 15px 8px;
+  border: none;
   border-radius: 4px;
 }
 
@@ -107,6 +108,10 @@ select {
 
 /* * Navigation (Header) */
 
+.page-header {
+  z-index: 1;
+}
+
 .navigation {
   display: flex;
 }
@@ -114,7 +119,6 @@ select {
 .logo {
   margin-right: 30px;
   height: 65px;
-  z-index: 1;
 }
 
 .navigation-list,
@@ -152,8 +156,8 @@ select {
 }
 
 .navigation-list-link-current .navigation-list-link-inner {
-  padding-bottom: 16px;
-  border-bottom: 3px solid #756257;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #756257;
 }
 
 .navigation-user-link {
@@ -282,7 +286,6 @@ select {
 
 .mailing-btn {
   min-width: 200px;
-  border: none;
   border-radius: 0 10px 10px 0;
 }
 
@@ -511,12 +514,10 @@ select {
 .submit-btn {
   padding: 14px 15px;
   margin-bottom: 11px;
-  border: none;
 }
 
 .reset-btn {
   background-color: transparent;
-  border: none;
   font-weight: 400;
   text-transform: capitalize;
   padding-bottom: 0;
@@ -525,13 +526,13 @@ select {
 /* * Filter result */
 
 .catalog-container {
-  padding: 55px 0 25px 4px;
+  padding: 55px 1px 25px 4px;
 }
 
 .catalog-sorting {
   display: flex;
   align-items: center;
-  margin: 0 0 56px;
+  margin: 0 0 55px;
 }
 
 .catalog-sorting-text {
@@ -582,6 +583,18 @@ select {
 .catalog-card-item {
   padding: 20px;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content auto repeat(3, min-content);
+  gap: 16px 20px;
+  align-items: center;
+}
+
+.catalog-card-image-link {
+  grid-column: span 2;
+}
+
+.catalog-card-image {
+  display: block;
 }
 
 .catalog-card-title {
@@ -589,6 +602,31 @@ select {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  margin: 0;
+  grid-column: span 2;
+  align-self: start;
+}
+
+.catalog-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-card-type,
+.catalog-card-price {
+  margin: 0;
+}
+
+.catalog-card-stars {
+  display: flex;
+  align-items: center;
+}
+
+.catalog-card-star {
+  width: 18px;
+  height: 17px;
+  background: url("../images/icons/star.svg");
+  margin-right: 6px;
 }
 
 .catalog-card-rating {
@@ -596,10 +634,9 @@ select {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-}
-
-.catalog-divider {
-  border: 1px solid #E6E6E6;
+  margin: 0;
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
 }
 
 /* * Pagination */
