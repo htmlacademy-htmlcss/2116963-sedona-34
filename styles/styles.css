@@ -580,9 +580,8 @@ select {
 }
 
 .catalog-card-item {
-  box-sizing: border-box;
   padding: 20px;
-  width: 340px;
+  display: grid;
 }
 
 .catalog-card-title {
