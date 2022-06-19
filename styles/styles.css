@@ -596,6 +596,7 @@ select {
 
 .catalog-card-image {
   display: block;
+  background-color: #F2F2F2;
 }
 
 .catalog-card-title {
