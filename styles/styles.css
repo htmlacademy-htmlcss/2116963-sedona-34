@@ -620,7 +620,6 @@ select {
 
 .catalog-card-stars {
   display: flex;
-  align-items: center;
 }
 
 .catalog-card-star {
