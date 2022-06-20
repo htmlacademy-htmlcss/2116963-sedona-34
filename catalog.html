@@ -6,6 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon/favicon.png">
   </head>
 
   <body>
@@ -118,11 +119,11 @@
                     <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                     <div class="catalog-filter-price">
                       <label class="visually-hidden" for="price-from">От:</label>
-                      <input class="catalog-filter-price-number" type="number" id="price-from" name="price-from" value="0"
-                        placeholder="от">
+                      <input class="catalog-filter-price-number" type="number" id="price-from" name="price-from"
+                        value="0" placeholder="от">
                       <label class="visually-hidden" for="price-to">До:</label>
-                      <input class="catalog-filter-price-number" type="number" id="price-to" name="price-to" value="9000"
-                        placeholder="до">
+                      <input class="catalog-filter-price-number" type="number" id="price-to" name="price-to"
+                        value="9000" placeholder="до">
                     </div>
                   </fieldset>
                   <div class="catalog-filter-buttons">
@@ -166,43 +167,72 @@
 
           <ul class="catalog-card-list">
             <li class="catalog-card-item">
-              <img class="catalog-card-image" src="images/photo/amara.jpg" width="300" height="211"
-                alt="Амара Резорт & Спа">
-              <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+              <a class="catalog-card-image-link" href="#">
+                <img class=" catalog-card-image" src="images/photo/amara.jpg" width="300" height="211"
+                  alt="Амара Резорт & Спа">
+              </a>
+              <h3 class="catalog-card-title"><a class="catalog-card-link" href="#">Amara Resort & Spa</a></h3>
               <p class="catalog-card-type">Гостиница</p>
               <p class="catalog-card-price">От 4000 ₽</p>
               <a class="btn" href="#">Подробнее</a>
               <button class="btn btn-second" type="button">В избранное</button>
+              <div class="catalog-card-stars">
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+              </div>
               <p class="catalog-card-rating">Рейтинг: 8,5</p>
             </li>
             <li class="catalog-card-item">
-              <img class="catalog-card-image" src="images/photo/villas.jpg" width="300" height="211"
-                alt="Виллы в Поко Диабло">
-              <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
+              <a class="catalog-card-image-link" href="#">
+                <img class="catalog-card-image" src="images/photo/villas.jpg" width="300" height="211"
+                  alt="Виллы в Поко Диабло">
+              </a>
+              <h3 class="catalog-card-title"><a class="catalog-card-link" href="#">Villas at Poco Diablo</a></h3>
               <p class="catalog-card-type">Гостиница</p>
               <p class="catalog-card-price">От 5000 ₽</p>
               <a class="btn" href="#">Подробнее</a>
-              <button class="btn btn-selected" type="button">В избранное</button>
+              <button class="btn btn-selected" type="button">В избранном</button>
+              <div class="catalog-card-stars">
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+              </div>
               <p class="catalog-card-rating">Рейтинг: 9,2</p>
             </li>
             <li class="catalog-card-item">
-              <img class="catalog-card-image" src="images/photo/desert.jpg" width="300" height="211"
-                alt="Дезерт Куэйл Инн">
-              <h3 class="catalog-card-title">Desert Quail Inn</h3>
+              <a class="catalog-card-image-link" href="#">
+                <img class="catalog-card-image" src="images/photo/desert.jpg" width="300" height="211"
+                  alt="Дезерт Куэйл Инн">
+              </a>
+              <h3 class="catalog-card-title"><a class="catalog-card-link" href="#">Desert Quail Inn</a></h3>
               <p class="catalog-card-type">Гостиница</p>
               <p class="catalog-card-price">От 2500 ₽</p>
               <a class="btn" href="#">Подробнее</a>
               <button class="btn btn-second" type="button">В избранное</button>
+              <div class="catalog-card-stars">
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+              </div>
               <p class="catalog-card-rating">Рейтинг: 6,9</p>
             </li>
             <li class="catalog-card-item">
-              <img class="catalog-card-image" src="images/photo/greentree.jpg" width="300" height="211"
-                alt="Гринтри Инн">
-              <h3 class="catalog-card-title">GreenTree Inn</h3>
+              <a class="catalog-card-image-link" href="#">
+                <img class="catalog-card-image" src="images/photo/greentree.jpg" width="300" height="211"
+                  alt="Гринтри Инн">
+              </a>
+              <h3 class="catalog-card-title"><a class="catalog-card-link" href="#">GreenTree Inn</a></h3>
               <p class="catalog-card-type">Гостиница</p>
               <p class="catalog-card-price">От 1500 ₽</p>
               <a class="btn" href="#">Подробнее</a>
               <button class="btn btn-second" type="button">В избранное</button>
+              <div class="catalog-card-stars">
+                <div class="catalog-card-star"></div>
+                <div class="catalog-card-star"></div>
+              </div>
               <p class="catalog-card-rating">Рейтинг: 5,0</p>
             </li>
           </ul>
