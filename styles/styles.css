@@ -94,6 +94,7 @@ select {
 .page-wrapper {
   min-height: 100%;
   max-width: 1200px;
+  min-width: 680px;
   background: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
@@ -208,11 +209,6 @@ select {
   align-items: center;
 }
 
-.section-move {
-  position: relative;
-  right: 7px;
-}
-
 .section-interest {
   padding: 91px 0 92px;
 }
@@ -242,6 +238,12 @@ select {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
+}
+
+.section-interest .section-description {
+  position: relative;
+  right: 7px;
+  text-indent: 12px;
 }
 
 .section-btn {
@@ -300,18 +302,18 @@ select {
   width: 100%;
 }
 
+.advantages-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .advantages-item {
   min-height: 384px;
   width: calc(100% / 3);
   padding: 30px;
   box-sizing: border-box;
   display: flex;
-}
-
-.advantages-item-wide {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .advantages-image {
