@@ -71,6 +71,11 @@ select {
   cursor: pointer;
 }
 
+.btn:hover,
+.btn:focus {
+  background-color: #615048;
+}
+
 .btn-large {
   font-size: 20px;
   line-height: 36px;
@@ -81,13 +86,28 @@ select {
   background-color: #82B3D3;
 }
 
+.btn-second:hover,
+.btn-second:focus {
+  background-color: #68A2CA;
+}
+
 .btn-selected {
   background-color: #7DB54F;
 }
 
-.btn-disabled {
-  background-color: #F2F2F2;
-  color: #000;
+.btn-selected:hover,
+.btn-selected:focus {
+  background-color: #6C9E42;
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn:disabled {
+  background-color: #E5E5E5;;
+  color: #fff;
+  cursor: default;
 }
 
 /* * */
@@ -649,10 +669,21 @@ select {
   margin-right: 8px;
 }
 
-.pagination-item .btn {
+.pagination-btn {
   box-sizing: border-box;
   width: 60px;
   height: 60px;
+  border: 1px solid #82B3D3;
+}
+
+.pagination-current,
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active {
+  background-color: #F2F2F2;
+  color: #000;
+  border: none;
+  cursor: default;
 }
 
 .catalog-pages-group {
