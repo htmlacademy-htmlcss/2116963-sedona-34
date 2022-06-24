@@ -77,6 +77,11 @@ select {
   outline: none;
 }
 
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
 .btn-large {
   font-size: 20px;
   line-height: 36px;
@@ -92,6 +97,10 @@ select {
   background-color: #68A2CA;
 }
 
+.btn-second:active {
+  background-color: #82B3D3;
+}
+
 .btn-selected {
   background-color: #7DB54F;
 }
@@ -101,8 +110,8 @@ select {
   background-color: #6C9E42;
 }
 
-.btn:active {
-  color: rgba(255, 255, 255, 0.3);
+.btn-selected:active {
+  background-color: #7DB54F;
 }
 
 .btn:disabled {
@@ -179,17 +188,7 @@ select {
   position: relative;
 }
 
-.navigation-list-link:not(.navigation-list-link-current):hover,
-.navigation-list-link:not(.navigation-list-link-current):focus {
-  color: #756157;
-  outline: none;
-}
-
-.navigation-list-link:not(.navigation-list-link-current):active {
-  color: rgba(117, 97, 87, 0.3);
-}
-
-.navigation-list-link-current::before {
+.navigation-list-link-current::after {
   content: "";
   height: 2px;
   background-color: #756257;
@@ -214,19 +213,6 @@ select {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.navigation-user-link:hover .navigation-user-icon,
-.navigation-user-link:focus .navigation-user-icon {
-  fill: #756157;
-}
-
-.navigation-user-link:focus {
-  outline: none;
-}
-
-.navigation-user-link:active .navigation-user-icon {
-  fill: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-user-favorite::after {
@@ -522,16 +508,6 @@ select {
   text-decoration: none;
 }
 
-.phone-number:hover,
-.phone-number:focus {
-  color: #756157;
-  outline: none;
-}
-
-.phone-number:active {
-  color: rgba(117, 97, 87, 0.3);
-}
-
 .htmlacademy {
   min-width: 115px;
   position: relative;
@@ -542,19 +518,6 @@ select {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.htmlacademy:hover .htmlacademy-logo,
-.htmlacademy:focus .htmlacademy-logo{
-  fill: #756157;
-}
-
-.htmlacademy:focus {
-  outline: none;
-}
-
-.htmlacademy:active .htmlacademy-logo {
-  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* * Page intro (filter) */
@@ -857,4 +820,18 @@ select {
 
 .text-white {
   color: #fff;
+}
+
+.link-decoration-basic {
+  color: #000;
+}
+
+.link-decoration-basic:hover,
+.link-decoration-basic:focus {
+  color: #756157;
+  outline: none;
+}
+
+.link-decoration-basic:active {
+  color: rgba(117, 97, 87, 0.3);;
 }
