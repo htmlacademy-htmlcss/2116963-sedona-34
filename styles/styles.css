@@ -178,6 +178,15 @@ select {
   position: relative;
 }
 
+.navigation-list-link:not(.navigation-list-link-current):hover,
+.navigation-list-link:not(.navigation-list-link-current):focus {
+  color: #756157;
+}
+
+.navigation-list-link:not(.navigation-list-link-current):active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .navigation-list-link-current::before {
   content: "";
   height: 2px;
@@ -195,6 +204,51 @@ select {
   padding: 20px 10px 19px;
   min-width: 42px;
   min-height: 65px;
+  position: relative;
+}
+
+.navigation-user-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #000;
+}
+
+.navigation-user-link:hover .navigation-user-icon,
+.navigation-user-link:focus .navigation-user-icon {
+  fill: #756157;
+}
+
+.navigation-user-link:active .navigation-user-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-user-favorite::after {
+  content: "12";
+  position: absolute;
+  top: 23%;
+  right: -5%;
+  color: #fff;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.1em;
+  width: 20px;
+  height: 20px;
+  padding-right: 1px;
+  box-sizing: border-box;
+  background-color: #7DB54F;
+  border-radius: 50%;
+}
+
+.navigation-user-favorite:hover::after,
+.navigation-user-favorite:focus::after {
+  background-color: #6C9E42;;
+}
+
+.navigation-user-favorite:active::after {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-user-item-btn {
