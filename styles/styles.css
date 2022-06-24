@@ -531,27 +531,52 @@ select {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
-  margin: 0 0 10px;
+  margin: 0 0 5px;
   padding: 0;
 }
 
 .breadcrumbs {
   list-style: none;
-  margin: 0 0 40px 0;
+  margin: 0 0 35px;
   padding: 0;
   display: flex;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+  content: url("../images/icons/arrow-right.svg");
 }
 
 .breadcrumbs-link {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
-  margin-right: 10px;
-  padding-left: 15px;
+  padding: 5px 10px;
 }
 
-.breadcrumbs-link-first {
-  padding-left: 0;
+.breadcrumbs-icon {
+  display: block;
+}
+
+.breadcrumbs-item:first-child .breadcrumbs-link {
+  padding-left: 2px;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-link-current):hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-link-current):active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-filter {
