@@ -360,6 +360,7 @@ select {
   border: none;
   border-radius: 10px 0 0 10px;
   width: 50%;
+  padding: 0;
 }
 
 .mailing-field::placeholder {
@@ -466,7 +467,7 @@ select {
 /* * Contacts */
 
 .contacts {
-  padding: 42px 0 30px;
+  padding: 44px 0 30px;
 }
 
 .contacts-container {
@@ -521,8 +522,39 @@ select {
   text-decoration: none;
 }
 
+.phone-number:hover,
+.phone-number:focus {
+  color: #756157;
+  outline: none;
+}
+
+.phone-number:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.htmlacademy {
+  min-width: 115px;
+  position: relative;
+}
+
 .htmlacademy-logo {
-  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.htmlacademy:hover .htmlacademy-logo,
+.htmlacademy:focus .htmlacademy-logo{
+  fill: #756157;
+}
+
+.htmlacademy:focus {
+  outline: none;
+}
+
+.htmlacademy:active .htmlacademy-logo {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* * Page intro (filter) */
