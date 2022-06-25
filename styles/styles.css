@@ -452,7 +452,7 @@ select {
 /* * Contacts */
 
 .contacts {
-  padding: 44px 0 30px;
+  padding: 45px 0 30px;
 }
 
 .contacts-container {
@@ -667,13 +667,13 @@ select {
 /* * Filter result */
 
 .catalog-container {
-  padding: 55px 1px 25px 4px;
+  padding: 55px 0 25px 4px;
 }
 
 .catalog-sorting {
   display: flex;
   align-items: center;
-  margin: 0 0 56px;
+  margin: 0 0 57px;
 }
 
 .catalog-sorting-text {
@@ -682,7 +682,7 @@ select {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 0 30px 0 0;
+  margin: 3px 30px 0 0;
 }
 
 .catalog-sorting .select-control {
@@ -693,7 +693,7 @@ select {
 
 .sorting-display {
   list-style: none;
-  margin: 0;
+  margin: 0 3px 0 0;
   padding: 0;
   display: flex;
 }
@@ -706,15 +706,46 @@ select {
   display: block;
   width: 48px;
   height: 48px;
-  outline: 1px solid black;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.sorting-display-table {
+  background: url("../images/icons/table.svg") center/16px 14px no-repeat;
+}
+
+.sorting-display-slide {
+  background: url("../images/icons/slideshow.svg") center/16px 14px no-repeat;
+}
+
+.sorting-display-list {
+  background: url("../images/icons/list.svg") center/16px 14px no-repeat;
+}
+
+.sorting-display-active {
+  border: 2px solid #000;
+}
+
+.sorting-display-link:hover {
+  border: 2px solid #000;
+}
+
+.sorting-display-link:focus {
+  border: 2px solid #68A2CA;
+  outline: none;
+}
+
+.sorting-display-link:active {
+  border: 2px solid #000;
 }
 
 /* * Cards */
 
 .catalog-card-list {
   list-style: none;
-  margin: 0 0 30px 0;
-  padding: 0 0 66px 0;
+  margin: 0 0 29px 0;
+  padding: 0 0 65px 0;
   border-bottom: 1px solid #E6E6E6;
   display: grid;
   grid-template-columns: repeat(auto-fit, 340px);
@@ -820,7 +851,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
+  margin: 0 3px 0 auto;
 }
 
 /* * Select control */
@@ -856,16 +887,16 @@ select {
   color: #fff;
 }
 
-.link-decoration-basic {
+.interactive-decoration-basic {
   color: #000;
 }
 
-.link-decoration-basic:hover,
-.link-decoration-basic:focus {
+.interactive-decoration-basic:hover,
+.interactive-decoration-basic:focus {
   color: #756157;
   outline: none;
 }
 
-.link-decoration-basic:active {
+.interactive-decoration-basic:active {
   color: rgba(117, 97, 87, 0.3);;
 }
