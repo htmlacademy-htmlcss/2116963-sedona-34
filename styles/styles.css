@@ -345,17 +345,13 @@ select {
   border: none;
   border-radius: 10px 0 0 10px;
   width: 50%;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 0 22px;
 }
 
 .mailing-field::placeholder {
   color: #000;
   opacity: 0.6;
-  text-indent: 22px;
-}
-
-.mailing-field:placeholder-shown {
-  text-indent: 22px;
 }
 
 .mailing-btn {
@@ -662,6 +658,12 @@ select {
 
 .reset-btn:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.reset-btn:disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.2);
+  cursor: default;
 }
 
 /* * Filter result */
