@@ -507,16 +507,8 @@ select {
   text-decoration: none;
 }
 
-.htmlacademy {
-  min-width: 115px;
-  position: relative;
-}
-
 .htmlacademy-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
 }
 
 /* * Page intro (filter) */
@@ -641,18 +633,35 @@ select {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+  margin-bottom: -5px;
 }
 
 .submit-btn {
   padding: 14px 15px;
-  margin-bottom: 11px;
+  margin-bottom: 15px;
 }
 
 .reset-btn {
   background-color: transparent;
   font-weight: 400;
   text-transform: capitalize;
-  padding-bottom: 0;
+  padding: 5px 15px;
+  margin: 0 auto;
+}
+
+.reset-btn:hover {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reset-btn:focus {
+  background-color: transparent;
+  outline: 3px solid #83B3D3;
+  border-radius: 1px;
+}
+
+.reset-btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* * Filter result */
