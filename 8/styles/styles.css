@@ -214,8 +214,7 @@ select {
   transform: translate(-50%, -50%);
 }
 
-.navigation-user-favorite::after {
-  content: "12";
+.navigation-user-favorite-number {
   position: absolute;
   top: 23%;
   right: -5%;
@@ -232,12 +231,13 @@ select {
   border-radius: 50%;
 }
 
-.navigation-user-favorite:hover::after,
-.navigation-user-favorite:focus::after {
+.navigation-user-favorite:hover .navigation-user-favorite-number,
+.navigation-user-favorite:focus .navigation-user-favorite-number {
   background-color: #6C9E42;
 }
 
-.navigation-user-favorite:active::after {
+.navigation-user-favorite:active .navigation-user-favorite-number {
+  background-color: #7DB54F;
   color: rgba(255, 255, 255, 0.3);
 }
 
