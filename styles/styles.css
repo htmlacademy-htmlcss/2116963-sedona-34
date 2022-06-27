@@ -585,7 +585,7 @@ select {
 }
 
 .catalog-filter-group-first {
-  margin-right: 70px;
+  margin-right: 71px;
 }
 
 .catalog-filter-range {
@@ -608,6 +608,57 @@ select {
 
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.control {
+  padding-left: 39px;
+  position: relative;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  left: 0;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/icons/checked.svg");
+  background-position: top 5px left 4px;
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+}
+
+.control-input:focus-visible + .control-mark {
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.control-input[type="checkbox"]:focus-visible + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-checkbox:hover > .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-checkbox:active > .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-filter-price-number {
