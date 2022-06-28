@@ -517,7 +517,7 @@ select {
   display: block;
 }
 
-/* * Page intro (filter) */
+/* * Page intro */
 
 .page-intro {
   background: #82B3D3 url("../images/background/page-intro-background.jpg") 0 0/cover no-repeat;
@@ -577,6 +577,8 @@ select {
   color: rgba(255, 255, 255, 0.3);
 }
 
+/* * Filter */
+
 .catalog-filter {
   display: flex;
   justify-content: space-between;
@@ -596,10 +598,6 @@ select {
 
 .catalog-filter-group:last-child {
   margin-right: 0;
-}
-
-.catalog-filter-price {
-  width: 288px;
 }
 
 .catalog-filter-title {
@@ -671,18 +669,66 @@ select {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.catalog-filter-range-inputs {
+  display: flex;
+  margin-top: 2px;
+}
+
+.range-input-label {
+  position: relative;
+}
+
+.range-input-description {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  opacity: 0.3;
+}
+
 .range-input {
   background-color: transparent;
   color: inherit;
-  width: 130px;
+  width: 144px;
   margin: 0;
-  padding: 0;
+  padding: 11px 45px 11px 17px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
 }
 
-.range-input::placeholder {
-  color: #fff;
-  opacity: 0.3;
-  text-align: right;
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-input {
+  -moz-appearance: textfield;
+}
+
+.range-input-left {
+  border-radius: 4px 0 0 4px;
+  border-right: 1px solid #fff;
+}
+
+.range-input-right {
+  border-radius: 0 4px 4px 0;
+  border-left: 1px solid #fff;
+}
+
+.range-input-label:hover .range-input {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-input:focus {
+  box-shadow: inset 0 0 0 3px #81B3D2, 0 0 0 3px #81B3D2;
+  outline: none;
+  border-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.range-input:active {
+  background: #756157;
 }
 
 .catalog-filter-buttons {
@@ -713,11 +759,7 @@ select {
 
 .reset-btn:focus {
   background-color: transparent;
-}
-
-.reset-btn:focus-visible {
   box-shadow: 0 0 0 3px #83B3D3;
-  border-radius: 2px;
 }
 
 .reset-btn:active {

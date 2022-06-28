@@ -111,7 +111,8 @@
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
                         <label class="control">
-                          <input class="control-input visually-hidden" type="radio" name="housing" value="hotel" checked>
+                          <input class="control-input visually-hidden" type="radio" name="housing" value="hotel"
+                            checked>
                           <span class="control-mark"></span>
                           Гостиница
                         </label>
@@ -135,15 +136,19 @@
                 </div>
 
                 <div class="catalog-filter-container">
-                  <fieldset class="catalog-filter-group catalog-filter-range">
+                  <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                     <div class="catalog-filter-range-inputs">
-                      <label class="visually-hidden" for="min-price">От:</label>
-                      <input class="range-input" type="number" id="min-price" name="min-price"
-                        value="0" placeholder="от">
-                      <label class="visually-hidden" for="max-price">До:</label>
-                      <input class="range-input" type="number" id="max-price" name="max-price"
-                        value="9000" placeholder="до">
+                      <label class="range-input-label">
+                        <span class="range-input-description">от</span>
+                        <input class="range-input range-input-left" type="number" id="min-price" name="min-price"
+                          value="0">
+                      </label>
+                      <label class="range-input-label">
+                        <span class="range-input-description">до</span>
+                        <input class="range-input range-input-right" type="number" id="max-price" name="max-price"
+                          value="9000">
+                      </label>
                     </div>
                     <div class="catalog-filter-range-scale">
                       <div class="range-scale">
