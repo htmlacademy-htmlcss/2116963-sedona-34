@@ -161,11 +161,13 @@
           <div class="catalog-sorting">
             <p class="catalog-sorting-text">Найдено гостиниц: 38</p>
             <label class="visually-hidden" for="select-control-price">Сортировка</label>
-            <select class="select-control" id="select-control-price">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+            <div class="catalog-sorting-select">
+              <select class="select-control" id="select-control-price">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
             <ul class="sorting-display">
               <li class="sorting-display-item">
                 <a class="sorting-display-link sorting-display-table sorting-display-active">
@@ -284,17 +286,19 @@
             </ul>
             <div class="catalog-pages-group">
               <label class="catalog-pages-number" for="select-control-pages">Гостиниц на странице:</label>
-              <select class="select-control" id="select-control-pages">
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four" selected>4</option>
-                <option value="five">5</option>
-                <option value="six">6</option>
-                <option value="seven">7</option>
-                <option value="eight">8</option>
-                <option value="nine">9</option>
-              </select>
+              <div class="catalog-pages-select">
+                <select class="select-control" id="select-control-pages">
+                  <option value="one">1</option>
+                  <option value="two">2</option>
+                  <option value="three">3</option>
+                  <option value="four" selected>4</option>
+                  <option value="five">5</option>
+                  <option value="six">6</option>
+                  <option value="seven">7</option>
+                  <option value="eight">8</option>
+                  <option value="nine">9</option>
+                </select>
+              </div>
             </div>
           </div>
         </section>
