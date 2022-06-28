@@ -354,6 +354,16 @@ select {
   opacity: 0.6;
 }
 
+.mailing-field:hover,
+.mailing-field:focus {
+  background-color: #E6E6E6;
+}
+
+.mailing-field:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
 .mailing-btn {
   min-width: 200px;
   border-radius: 0 10px 10px 0;
