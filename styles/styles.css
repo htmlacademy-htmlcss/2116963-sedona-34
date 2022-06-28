@@ -671,7 +671,7 @@ select {
 
 .catalog-filter-range-inputs {
   display: flex;
-  margin-top: 2px;
+  margin: 3px 0 29px;
 }
 
 .range-input-label {
@@ -690,7 +690,7 @@ select {
   color: inherit;
   width: 144px;
   margin: 0;
-  padding: 11px 45px 11px 17px;
+  padding: 11px 45px 10px 17px;
   border: 2px solid #fff;
   box-sizing: border-box;
 }
@@ -729,6 +729,53 @@ select {
 
 .range-input:active {
   background: #756157;
+}
+
+.range-scale {
+  position: relative;
+  width: 288px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  background-color: #fff;
+  height: 100%;
+  max-width: 100%;
+}
+
+.range-toggle {
+  position: absolute;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  right: -10px;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow:0 0 0 3px #83B3D3,  0 4px 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.range-toggle:active {
+  box-shadow: 0 0 0 2px #83B3D3, 0 7px 15px rgba(0, 0, 0, 0.25);
 }
 
 .catalog-filter-buttons {
