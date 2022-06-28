@@ -584,21 +584,21 @@ select {
   gap: 50px;
 }
 
-.catalog-filter-set {
+.catalog-filter-container {
   display: flex;
 }
 
 .catalog-filter-group {
   border: none;
-  margin: 0;
+  margin: 0 71px 0 0;
   padding: 0;
 }
 
-.catalog-filter-group-first {
-  margin-right: 71px;
+.catalog-filter-group:last-child {
+  margin-right: 0;
 }
 
-.catalog-filter-range {
+.catalog-filter-price {
   width: 288px;
 }
 
@@ -671,7 +671,7 @@ select {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.catalog-filter-price-number {
+.range-input {
   background-color: transparent;
   color: inherit;
   width: 130px;
@@ -679,7 +679,7 @@ select {
   padding: 0;
 }
 
-.catalog-filter-price-number::placeholder {
+.range-input::placeholder {
   color: #fff;
   opacity: 0.3;
   text-align: right;
