@@ -126,7 +126,7 @@
               <div class="advantages-content">
                 <h3 class="advantages-content-title">Небольшая площадь</h3>
                 <p class="advantages-content-number">— №3 —</p>
-                <p class="advantages-content-description">Все достоприме&#8203чательности находятся очень близко</p>
+                <p class="advantages-content-description">Все достоприме&#8203;чательности находятся очень близко</p>
               </div>
             </li>
             <li class="advantages-item background-blue-02">
@@ -219,7 +219,7 @@
       </footer>
     </div>
 
-    <div class="modal-container">
+    <div class="modal-container display-none">
       <div class="modal">
         <div class="modal-header">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
@@ -248,24 +248,41 @@
             <label class="modal-label" for="adults">Взрослые:</label>
             <span class="modal-input-number-wrapper">
               <input class="modal-input-number" type="number" id="adults" name="adults" value="2">
-              <button class="number-btn number-btn-left icon-minus">
+              <button class="number-btn number-btn-left icon-minus" type="button">
                 <span class="visually-hidden">Уменьшить число взрослых</span>
               </button>
-              <button class="number-btn number-btn-right icon-plus">
+              <button class="number-btn number-btn-right icon-plus" type="button">
                 <span class="visually-hidden">Увеличить число взрослых</span>
               </button>
             </span>
           </div>
           <div class="modal-inner-container">
-            <label class="modal-label" for="children">Дети:
-              <span class="modal-tooltip"></span>
-            </label>
+            <div class="modal-label">
+              <label class="modal-label-inner" for="children">Дети:</label>
+              <span class="modal-tooltip">
+                <button class="tooltip-btn" type="button" aria-labelledby="tooltip-text-id">
+                  <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="1" height="9" aria-hidden="true"
+                    focusable="false" fill="currentColor">
+                    <g clip-path="url(#a)">
+                      <path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z" />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h1v9H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-text-id">Укажите количество детей, которые будут с
+                  вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </div>
             <span class="modal-input-number-wrapper">
               <input class="modal-input-number" type="number" id="children" name="children" value="1">
-              <button class="number-btn number-btn-left icon-minus">
+              <button class="number-btn number-btn-left icon-minus" type="button">
                 <span class="visually-hidden">Уменьшить число детей</span>
               </button>
-              <button class="number-btn number-btn-right icon-plus">
+              <button class="number-btn number-btn-right icon-plus" type="button">
                 <span class="visually-hidden">Увеличить число детей</span>
               </button>
             </span>
