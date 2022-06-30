@@ -685,8 +685,8 @@ select {
 
 .number-btn-icon {
   position: absolute;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.3;
@@ -700,25 +700,20 @@ select {
   right: 15px;
 }
 
-.icon-minus::before,
-.icon-plus::before,
-.icon-plus::after {
-  content: "";
-  position: absolute;
-  width: 13px;
-  height: 1px;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #000;
+.icon-minus {
+  background: url("../images/icons/minus.svg") center no-repeat;
 }
 
-.icon-plus::after {
-  transform: translateX(-50%) rotate(90deg);
+.icon-plus {
+  background: url("../images/icons/plus.svg") center no-repeat;
 }
 
 .number-btn:hover .number-btn-icon {
   opacity: 1;
+}
+
+.number-btn:focus {
+  outline: none;
 }
 
 .number-btn:focus .number-btn-icon {
@@ -727,8 +722,7 @@ select {
   opacity: 1;
 }
 
-.number-btn:active .number-btn-icon::before,
-.number-btn:active .number-btn-icon::after {
+.number-btn:active .number-btn-icon {
   opacity: 0.2;
 }
 
