@@ -757,6 +757,7 @@ select {
   border: none;
   position: relative;
   color: #fff;
+  cursor: pointer;
 }
 
 .tooltip-icon {
@@ -927,6 +928,7 @@ select {
 .control {
   padding-left: 39px;
   position: relative;
+  cursor: pointer;
 }
 
 .control-mark {
@@ -1332,6 +1334,7 @@ select {
   background-image: url("../images/icons/arrow-down.svg");
   background-position: top 20px right 19px;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .select-control:hover,
