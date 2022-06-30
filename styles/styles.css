@@ -665,23 +665,38 @@ select {
 
 .number-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 21px;
-  height: 21px;
+  top: 0;
+  width: 46px;
+  height: 100%;
   padding: 0;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  opacity: 0.3;
   background-color: inherit;
 }
 
 .number-btn-left {
-  left: 15px;
+  left: 0
 }
 
 .number-btn-right {
+  right: 0;
+}
+
+.number-btn-icon {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.number-btn-icon-left {
+  left: 15px;
+}
+
+.number-btn-icon-right {
   right: 15px;
 }
 
@@ -702,19 +717,18 @@ select {
   transform: translateX(-50%) rotate(90deg);
 }
 
-.number-btn:hover {
+.number-btn:hover .number-btn-icon {
   opacity: 1;
 }
 
-.number-btn:focus {
+.number-btn:focus .number-btn-icon {
   box-shadow: 0 0 0 3px #83B3D3;
   border-radius: 2px;
-  outline: none;
   opacity: 1;
 }
 
-.number-btn:active::before,
-.number-btn:active::after {
+.number-btn:active .number-btn-icon::before,
+.number-btn:active .number-btn-icon::after {
   opacity: 0.2;
 }
 
