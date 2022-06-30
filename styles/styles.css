@@ -1328,6 +1328,7 @@ select {
   appearance: none;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  background-color: inherit;
   background-image: url("../images/icons/arrow-down.svg");
   background-position: top 20px right 19px;
   background-repeat: no-repeat;
