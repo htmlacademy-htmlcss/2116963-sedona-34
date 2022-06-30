@@ -218,10 +218,11 @@
         </section>
       </footer>
     </div>
+
     <div class="modal-container">
       <div class="modal">
         <div class="modal-header">
-          <h2 class="modal-title">Поиск гостиниц в Седоне</h2>
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <button class="modal-btn-close" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" aria-hidden="true" focusable="false"
               fill="currentColor">
@@ -231,13 +232,46 @@
             <span class="visually-hidden">Закрыть окно.</span>
           </button>
         </div>
-        <div class="modal-content">
-          <div class="input-date"></div>
-          <div class="input-date"></div>
-          <div class="input-number"></div>
-          <div class="input-number"></div>
-          <button class="btn btn-large btn-second"></button>
-        </div>
+        <form class="modal-content" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="modal-inner-container">
+            <label class="modal-label" for="arrival-date">Дата заезда:</label>
+            <input class="modal-input-date" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020">
+            <p class="modal-message message-error">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <div class="modal-inner-container">
+            <label class="modal-label" for="departure-date">Дата выезда:</label>
+            <input class="modal-input-date" type="text" id="departure-date" name="departure-date"
+              value="1 сентября 2021">
+            <p class="modal-message message-success">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <div class="modal-inner-container">
+            <label class="modal-label" for="adults">Взрослые:</label>
+            <span class="modal-input-number-wrapper">
+              <input class="modal-input-number" type="number" id="adults" name="adults" value="2">
+              <button class="number-btn number-btn-left icon-minus">
+                <span class="visually-hidden">Уменьшить число взрослых</span>
+              </button>
+              <button class="number-btn number-btn-right icon-plus">
+                <span class="visually-hidden">Увеличить число взрослых</span>
+              </button>
+            </span>
+          </div>
+          <div class="modal-inner-container">
+            <label class="modal-label" for="children">Дети:
+              <span class="modal-tooltip"></span>
+            </label>
+            <span class="modal-input-number-wrapper">
+              <input class="modal-input-number" type="number" id="children" name="children" value="1">
+              <button class="number-btn number-btn-left icon-minus">
+                <span class="visually-hidden">Уменьшить число детей</span>
+              </button>
+              <button class="number-btn number-btn-right icon-plus">
+                <span class="visually-hidden">Увеличить число детей</span>
+              </button>
+            </span>
+          </div>
+          <button class="btn btn-large btn-second modal-btn-find" type="submit">Найти</button>
+        </form>
       </div>
     </div>
   </body>
