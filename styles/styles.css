@@ -545,7 +545,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 53px;
+  margin-bottom: 52px;
 }
 
 .modal-title {
@@ -574,6 +574,7 @@ select {
 .modal-btn-close:focus {
   background-color: #E6E6E6;
   box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
 }
 
 .modal-btn-close:active {
@@ -618,112 +619,28 @@ select {
   margin-left: 18px;
 }
 
-.modal-input-date {
-  width: 420px;
-  box-sizing: border-box;
-  padding: 14px 19px 14px 19px;
-  color: #000;
-  border: none;
-  border-radius: 4px;
-  background: url("../images/icons/calendar.svg") right 19px center no-repeat, #F2F2F2;
-}
-
-.modal-input-date:hover {
-  background-color: #E6E6E6;
-}
-
-.modal-input-date:focus {
-  background-color: #E6E6E6;
-  outline: none;
-  box-shadow: 0 0 0 3px #83B3D3;
-}
-
-.modal-input-date:active {
-  background-color: #fff;
-  box-shadow: 0 0 0 2px #000;
-}
-
-.modal-input-number-wrapper {
-  width: 132px;
+.modal-input-wrapper {
   position: relative;
+  border-radius: 4px;
 }
 
-.modal-input-number {
-  width: 100%;
-  padding: 15px 0 14px;
-  text-align: center;
+.modal-input {
+  box-sizing: border-box;
+  color: #000;
   border: none;
   border-radius: 4px;
   background-color: #F2F2F2;
-  color: #000;
 }
 
-.modal-input-number:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #83B3D3;
+.modal-input-date {
+  width: 420px;
+  padding: 14px 19px 14px 19px;
 }
 
-.number-btn {
-  position: absolute;
-  top: 0;
-  width: 46px;
-  height: 100%;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: inherit;
-}
-
-.number-btn-left {
-  left: 0
-}
-
-.number-btn-right {
-  right: 0;
-}
-
-.number-btn-icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.3;
-}
-
-.number-btn-icon-left {
-  left: 15px;
-}
-
-.number-btn-icon-right {
-  right: 15px;
-}
-
-.icon-minus {
-  background: url("../images/icons/minus.svg") center no-repeat;
-}
-
-.icon-plus {
-  background: url("../images/icons/plus.svg") center no-repeat;
-}
-
-.number-btn:hover .number-btn-icon {
-  opacity: 1;
-}
-
-.number-btn:focus {
-  outline: none;
-}
-
-.number-btn:focus .number-btn-icon {
-  box-shadow: 0 0 0 3px #83B3D3;
-  border-radius: 2px;
-  opacity: 1;
-}
-
-.number-btn:active .number-btn-icon {
-  opacity: 0.2;
+.modal-input-number {
+  width: 132px;
+  padding: 15px 0 14px;
+  text-align: center;
 }
 
 .modal-input-number::-webkit-outer-spin-button,
@@ -736,9 +653,92 @@ select {
   -moz-appearance: textfield;
 }
 
+.modal-input:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-input:focus {
+  background-color: #E6E6E6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.modal-input:active {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #000;
+}
+
+.input-btn {
+  position: absolute;
+  top: 0;
+  width: 46px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.input-btn-left {
+  left: 0
+}
+
+.input-btn-right {
+  right: 0;
+}
+
+.input-btn-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.input-btn-icon-left {
+  left: 15px;
+}
+
+.input-btn-icon-right {
+  right: 15px;
+}
+
+.icon-minus {
+  background: url("../images/icons/minus.svg") center no-repeat;
+}
+
+.icon-plus {
+  background: url("../images/icons/plus.svg") center no-repeat;
+}
+
+.icon-calendar {
+  background: url("../images/icons/calendar.svg") center no-repeat;
+}
+
+.input-btn:hover .input-btn-icon {
+  opacity: 1;
+}
+
+.input-btn:focus {
+  outline: none;
+}
+
+.input-btn:focus .input-btn-icon {
+  box-shadow: 0 0 0 3px #83B3D3;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.input-btn:active .input-btn-icon {
+  opacity: 0.2;
+}
+
 .modal-message {
   font-size: 16px;
   margin: 0;
+  margin-bottom: 2px;
   grid-column: 2 / 3;
 }
 
@@ -776,7 +776,7 @@ select {
 }
 
 .tooltip-text {
-  width: 220px;
+  width: 216px;
   padding: 15px 17px 22px 21px;
   background: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -790,6 +790,7 @@ select {
   left: 50%;
   transform: translateX(-50%);
   text-transform: none;
+  letter-spacing: -0.1px;
   display: none;
 }
 
