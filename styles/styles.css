@@ -21,6 +21,7 @@ html {
 body {
   height: 100%;
   margin: 0;
+  padding: 0 10px;
   color: #333;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -72,7 +73,7 @@ select {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
   background-color: #615048;
   outline: none;
 }
@@ -93,7 +94,7 @@ select {
 }
 
 .btn-second:hover,
-.btn-second:focus {
+.btn-second:focus-visible {
   background-color: #68A2CA;
 }
 
@@ -106,7 +107,7 @@ select {
 }
 
 .btn-selected:hover,
-.btn-selected:focus {
+.btn-selected:focus-visible {
   background-color: #6C9E42;
 }
 
@@ -232,7 +233,7 @@ select {
 }
 
 .navigation-user-favorite:hover .navigation-user-favorite-number,
-.navigation-user-favorite:focus .navigation-user-favorite-number {
+.navigation-user-favorite:focus-visible .navigation-user-favorite-number {
   background-color: #6C9E42;
 }
 
@@ -311,12 +312,6 @@ select {
   margin: 0;
 }
 
-.section-interest .section-description {
-  position: relative;
-  right: 7px;
-  text-indent: 12px;
-}
-
 .section-btn {
   width: 544px;
   margin-top: 56px;
@@ -347,21 +342,27 @@ select {
   width: 50%;
   box-sizing: border-box;
   padding: 0 22px;
+  color: #000;
 }
 
 .mailing-field::placeholder {
-  color: #000;
+  color: inherit;
   opacity: 0.6;
 }
 
 .mailing-field:hover,
-.mailing-field:focus {
+.mailing-field:focus-visible {
   background-color: #E6E6E6;
 }
 
-.mailing-field:focus {
+.mailing-field:focus-visible {
   box-shadow: 0 0 0 3px #83B3D3;
   outline: none;
+}
+
+.mailing-field:disabled {
+  background-color: #E5E5E5;
+  color: #fff;
 }
 
 .mailing-btn {
@@ -494,11 +495,11 @@ select {
 }
 
 .socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
+.socials-link:focus-visible .socials-icon {
   fill: #68A2CA;
 }
 
-.socials-link:focus {
+.socials-link:focus-visible {
   outline: none;
 }
 
@@ -571,7 +572,7 @@ select {
   background-color: #E6E6E6;
 }
 
-.modal-btn-close:focus {
+.modal-btn-close:focus-visible {
   background-color: #E6E6E6;
   box-shadow: 0 0 0 3px #83B3D3;
   outline: none;
@@ -657,15 +658,24 @@ select {
   background-color: #E6E6E6;
 }
 
-.modal-input:focus {
+.modal-input:focus-visible {
   background-color: #E6E6E6;
   outline: none;
   box-shadow: 0 0 0 3px #83B3D3;
 }
 
-.modal-input:active {
+.modal-input:active:not(:disabled) {
   background-color: #fff;
   box-shadow: 0 0 0 2px #000;
+}
+
+.modal-input:disabled {
+  background-color: #E5E5E5;
+  color: #fff;
+}
+
+.modal-input:disabled ~ .input-btn {
+  display: none;
 }
 
 .input-btn {
@@ -721,11 +731,11 @@ select {
   opacity: 1;
 }
 
-.input-btn:focus {
+.input-btn:focus-visible {
   outline: none;
 }
 
-.input-btn:focus .input-btn-icon {
+.input-btn:focus-visible .input-btn-icon {
   box-shadow: 0 0 0 3px #83B3D3;
   border-radius: 2px;
   opacity: 1;
@@ -737,8 +747,7 @@ select {
 
 .modal-message {
   font-size: 16px;
-  margin: 0;
-  margin-bottom: 2px;
+  margin: 0 0 2px;
   grid-column: 2 / 3;
 }
 
@@ -813,9 +822,13 @@ select {
   display: block;
 }
 
-.tooltip-btn:focus {
+.tooltip-btn:focus-visible {
   background-color: #68A2CA;
   outline: none;
+}
+
+.modal-tooltip:focus-visible-within .tooltip-text {
+  display: block;
 }
 
 .modal-btn-find {
@@ -825,7 +838,7 @@ select {
   border-radius: 10px;
 }
 
-.modal-btn-find:focus {
+.modal-btn-find:focus-visible {
   box-shadow: 0 0 0 3px #756257;
 }
 
@@ -884,7 +897,7 @@ select {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:focus {
+.breadcrumbs-link:focus-visible {
   color: rgba(255, 255, 255, 0.6);
   outline: none;
 }
@@ -970,20 +983,22 @@ select {
   background-color: #3F5E72;
 }
 
+.control:hover > .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 .control-input:focus-visible + .control-mark {
   box-shadow: 0 0 0 3px #83B3D3;
-}
-
-.control-input[type="checkbox"]:focus-visible + .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-checkbox:hover > .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.control-checkbox:active > .control-mark {
+.control-input:active + .control-mark {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:disabled + .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: default;
 }
 
 .catalog-filter-range-inputs {
@@ -1000,6 +1015,7 @@ select {
   top: 12px;
   right: 16px;
   opacity: 0.3;
+  z-index: 2;
 }
 
 .range-input {
@@ -1036,16 +1052,19 @@ select {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.range-input:focus {
+.range-input:focus-visible {
   box-shadow: inset 0 0 0 3px #81B3D2, 0 0 0 3px #81B3D2;
   outline: none;
-  border-color: #fff;
   position: relative;
   z-index: 1;
 }
 
 .range-input:active {
   background: #756157;
+}
+
+.range-input:disabled {
+  background-color: #E5E5E5;
 }
 
 .range-scale {
@@ -1079,20 +1098,26 @@ select {
 }
 
 .range-toggle-max {
-  right: -10px;
+  right: 0;
 }
 
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   box-shadow: 0 0 0 3px #83B3D3, 0 4px 10px rgba(0, 0, 0, 0.25);
   outline: none;
 }
 
 .range-toggle:active {
   box-shadow: 0 0 0 2px #83B3D3, 0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:disabled {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: default;
+  box-shadow: none;
 }
 
 .catalog-filter-buttons {
@@ -1121,7 +1146,7 @@ select {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.reset-btn:focus {
+.reset-btn:focus-visible {
   background-color: transparent;
   box-shadow: 0 0 0 3px #83B3D3;
 }
@@ -1203,7 +1228,7 @@ select {
   border: 2px solid #000;
 }
 
-.sorting-display-link:focus {
+.sorting-display-link:focus-visible {
   border: 2px solid #68A2CA;
   outline: none;
 }
@@ -1335,7 +1360,7 @@ select {
 .select-control {
   width: 100%;
   color: inherit;
-  padding: 12px 50px 12px 19px;
+  padding: 12px 50px 12px 17px;
   appearance: none;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1347,7 +1372,7 @@ select {
 }
 
 .select-control:hover,
-.select-control:focus {
+.select-control:focus-visible {
   border-color: #68A2CA;
   outline: none;
 }
@@ -1386,7 +1411,7 @@ select {
 }
 
 .interactive-decoration-basic:hover,
-.interactive-decoration-basic:focus {
+.interactive-decoration-basic:focus-visible {
   color: #756157;
   outline: none;
 }
