@@ -126,7 +126,7 @@ select {
 .page-wrapper {
   min-height: 100%;
   max-width: 1200px;
-  min-width: 680px;
+  min-width: 700px;
   background: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
