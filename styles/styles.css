@@ -693,6 +693,7 @@ select {
   cursor: pointer;
   border-radius: 4px;
   background-color: transparent;
+  opacity: 0.3;
 }
 
 .input-btn-left {
@@ -709,7 +710,6 @@ select {
   height: 20px;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.3;
 }
 
 .input-btn-icon-left {
@@ -732,22 +732,27 @@ select {
   background: url("../images/icons/calendar.svg") center no-repeat;
 }
 
-.input-btn:hover .input-btn-icon {
+.input-btn:hover {
   opacity: 1;
 }
 
 .input-btn:focus-visible {
+  opacity: 1;
   outline: none;
 }
 
 .input-btn:focus-visible .input-btn-icon {
   box-shadow: 0 0 0 3px #83B3D3;
   border-radius: 2px;
-  opacity: 1;
 }
 
-.input-btn:active .input-btn-icon {
+.input-btn:active {
   opacity: 0.2;
+}
+
+.input-btn:disabled {
+  opacity: 0.1;
+  cursor: default;
 }
 
 .modal-message {
