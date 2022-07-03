@@ -233,7 +233,7 @@
           </button>
         </div>
         <form class="modal-content" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="modal-inner-container">
+          <div class="modal-inner-container modal-inner-container-wide">
             <label class="modal-label" for="arrival-date">Дата заезда:</label>
             <div class="modal-input-wrapper">
               <input class="modal-input modal-input-date" type="text" id="arrival-date" name="arrival-date"
@@ -245,7 +245,7 @@
             </div>
             <p class="modal-message message-error">Мы не можем отправить вас в прошлое.</p>
           </div>
-          <div class="modal-inner-container">
+          <div class="modal-inner-container modal-inner-container-wide">
             <label class="modal-label" for="departure-date">Дата выезда:</label>
             <div class="modal-input-wrapper">
               <input class="modal-input modal-input-date" type="text" id="departure-date" name="departure-date"
@@ -257,7 +257,7 @@
             </div>
             <p class="modal-message">На эти даты есть свободные номера. Пока есть.</p>
           </div>
-          <div class="modal-inner-container">
+          <div class="modal-inner-container modal-inner-container-narrow">
             <label class="modal-label" for="adults">Взрослые:</label>
             <div class="modal-input-wrapper">
               <input class="modal-input modal-input-number" type="number" id="adults" name="adults" value="2">
@@ -271,7 +271,7 @@
               </button>
             </div>
           </div>
-          <div class="modal-inner-container">
+          <div class="modal-inner-container modal-inner-container-narrow">
             <div class="modal-label">
               <label class="modal-label-inner" for="children">Дети:</label>
               <span class="modal-tooltip">
@@ -304,7 +304,9 @@
               </button>
             </div>
           </div>
-          <button class="btn btn-large btn-second modal-btn-find" type="submit">Найти</button>
+          <div class="modal-inner-container modal-inner-container-wide">
+            <button class="btn btn-large btn-second modal-btn-find" type="submit">Найти</button>
+          </div>
         </form>
       </div>
     </div>
