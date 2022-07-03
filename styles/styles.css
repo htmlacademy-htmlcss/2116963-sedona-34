@@ -897,19 +897,23 @@ select {
   align-items: center;
 }
 
-.breadcrumbs-item:not(:first-child)::before {
-  content: url("../images/icons/arrow-right.svg");
+.breadcrumbs-item:not(:first-child) {
+  padding-left: 5px;
+  background: url("../images/icons/arrow-right.svg") top 50% left no-repeat;
 }
 
 .breadcrumbs-link {
+  display: flex;
+  height: 21px;
   color: #fff;
   font-size: 16px;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 5px 9px 5px 10px;
 }
 
 .breadcrumbs-icon {
   display: block;
+  margin: auto 0;
 }
 
 .breadcrumbs-item:first-child .breadcrumbs-link {
@@ -968,7 +972,7 @@ select {
 .catalog-filter-list {
   max-width: 160px;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 1px;
   padding: 0;
 }
 
@@ -989,11 +993,13 @@ select {
   background-color: #fff;
   border-radius: 4px;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icons/checked.svg");
-  background-position: top 5px left 4px;
+  background-position: top 50% left 50%;
   background-repeat: no-repeat;
 }
 
@@ -1006,8 +1012,9 @@ select {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: #3F5E72;
 }
@@ -1076,6 +1083,7 @@ select {
 }
 
 .range-input-right {
+  padding-left: 16px;
   border-radius: 0 4px 4px 0;
   border-left: 1px solid #fff;
 }
@@ -1411,7 +1419,7 @@ select {
 .select-control {
   width: 100%;
   color: inherit;
-  padding: 12px 50px 12px 16px;
+  padding: 12px 50px 12px 18px;
   appearance: none;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1420,6 +1428,12 @@ select {
   background-position: right 19px center;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+@-moz-document url-prefix() {
+  select {
+     text-indent: -2px;
+  }
 }
 
 .select-control:hover,
