@@ -944,9 +944,14 @@ select {
 }
 
 .catalog-filter-group {
+  max-width: 160px;
   border: none;
   margin: 0 71px 0 0;
   padding: 0;
+}
+
+.catalog-filter-group-range {
+  width: 288px;
 }
 
 .catalog-filter-group:last-child {
@@ -954,7 +959,6 @@ select {
 }
 
 .catalog-filter-title {
-  max-width: 160px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -962,12 +966,7 @@ select {
   padding: 0;
 }
 
-.catalog-filter-range-title {
-  max-width: 288px;
-}
-
 .catalog-filter-list {
-  max-width: 160px;
   list-style: none;
   margin: 0 0 0 1px;
   padding: 0;
@@ -990,13 +989,12 @@ select {
   background-color: #ffffff;
   border-radius: 4px;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1px;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/icons/checked.svg");
-  background-position: top 50% left 50%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
