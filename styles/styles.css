@@ -41,13 +41,6 @@ img {
   object-fit: contain;
 }
 
-button,
-input,
-select {
-  font-family: inherit;
-  font-size: 100%;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -68,6 +61,7 @@ select {
   text-align: center;
   background-color: #756157;
   color: #ffffff;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -275,10 +269,10 @@ select {
 /* * welcome */
 
 .welcome {
-  background: url("../images/welcome/welcome-devider.svg") 0 100%/100% auto no-repeat,
+  background: url("../images/welcome/welcome-devider.svg") 0 100.1%/100% auto no-repeat,
     url("../images/background/welcome-background.jpg") 0 0/cover no-repeat,
     #82b3d3;
-  padding: 51px 0 82px;
+  padding: 51px 0 81px;
 }
 
 .welcome-image {
@@ -289,14 +283,14 @@ select {
 /* * section */
 
 .section {
-  padding: 63px 0 90px;
+  padding: 65px 0 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .section-interest {
-  padding: 91px 0 92px;
+  padding: 90px 0 92px;
 }
 
 .section-mailing {
@@ -350,6 +344,8 @@ select {
 }
 
 .mailing-field {
+  font-family: inherit;
+  font-size: 100%;
   background-color: #f2f2f2;
   border: none;
   border-radius: 10px 0 0 10px;
@@ -561,7 +557,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 53px;
+  margin-bottom: 52px;
 }
 
 .modal-title {
@@ -573,6 +569,7 @@ select {
 }
 
 .modal-btn-close {
+  display: flex;
   width: 53px;
   flex-shrink: 0;
   height: 53px;
@@ -582,6 +579,10 @@ select {
   background-color: #f2f2f2;
   color: #000000;
   cursor: pointer;
+}
+
+.modal-btn-close-icon {
+  margin: auto;
 }
 
 .modal-btn-close:hover {
@@ -607,7 +608,7 @@ select {
 .modal-inner-container {
   display: grid;
   grid-template-columns: 1fr min-content;
-  grid-template-rows: 1fr minmax(39px, auto);
+  grid-template-rows: 1fr minmax(38px, auto);
   align-items: center;
 }
 
@@ -646,8 +647,8 @@ select {
 
 .modal-message {
   font-size: 16px;
-  margin: 0;
-  padding: 8px 0 10px;
+  margin: 0 0 3px;
+  padding: 0;
   grid-column: 2 / 3;
 }
 
@@ -661,6 +662,9 @@ select {
 }
 
 .modal-input {
+  padding: 15px 19px 14px;
+  font-family: inherit;
+  font-size: 100%;
   box-sizing: border-box;
   color: #000000;
   border: none;
@@ -670,12 +674,10 @@ select {
 
 .modal-input-date {
   width: 420px;
-  padding: 14px 19px 14px 19px;
 }
 
 .modal-input-number {
   width: 132px;
-  padding: 15px 0 14px;
   text-align: center;
   appearance: textfield;
 }
@@ -1039,7 +1041,7 @@ select {
 
 .catalog-filter-range-inputs {
   display: flex;
-  margin: 3px 0 29px;
+  margin: 4px 0 28px;
 }
 
 .range-input-label {
@@ -1058,6 +1060,8 @@ select {
 }
 
 .range-input {
+  font-family: inherit;
+  font-size: 100%;
   background-color: transparent;
   color: inherit;
   width: 144px;
@@ -1200,7 +1204,7 @@ select {
 /* * filter result */
 
 .catalog-container {
-  padding-top: 54px;
+  padding-top: 55px;
   padding-bottom: 25px;
   position: relative;
   left: 2px;
@@ -1288,8 +1292,8 @@ select {
 
 .catalog-card-list {
   list-style: none;
-  margin: 0 0 29px 0;
-  padding: 0 0 65px 0;
+  margin: 0 0 29px 1px;
+  padding: 0 0 66px 0;
   border-bottom: 1px solid #e6e6e6;
   display: grid;
   grid-template-columns: repeat(auto-fit, 340px);
@@ -1415,6 +1419,9 @@ select {
 
 .select-control {
   width: 100%;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
   color: inherit;
   padding: 12px 50px 12px 18px;
   appearance: none;
@@ -1428,7 +1435,7 @@ select {
 }
 
 @-moz-document url-prefix("") {
-  select {
+  .select-control {
     text-indent: -2px;
   }
 }
