@@ -370,6 +370,11 @@ img {
   outline: none;
 }
 
+.mailing-field:focus:not(:placeholder-shown) {
+  background: #ffffff;
+  box-shadow: inset 0 0 0 2px #000000;
+}
+
 .mailing-field:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -676,6 +681,12 @@ img {
   width: 420px;
 }
 
+.modal-input-date::placeholder {
+  font-weight: 700;
+  color: #000000;
+  opacity: 0.6;
+}
+
 .modal-input-number {
   width: 132px;
   text-align: center;
@@ -698,9 +709,9 @@ img {
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.modal-input:active:not(:disabled) {
+.modal-input:focus:not(:placeholder-shown) {
   background-color: #ffffff;
-  box-shadow: 0 0 0 2px #000000;
+  box-shadow: inset 0 0 0 2px #000000;
 }
 
 .modal-input:disabled {
@@ -1100,7 +1111,7 @@ img {
   z-index: 1;
 }
 
-.range-input:active {
+.range-input:focus:not(:placeholder-shown) {
   background: #756157;
 }
 
