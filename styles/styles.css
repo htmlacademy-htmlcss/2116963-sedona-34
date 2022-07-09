@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  min-width: 1280px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -127,7 +128,6 @@ img {
 .page-wrapper {
   min-height: 100%;
   max-width: 1200px;
-  min-width: 550px;
   background: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
@@ -412,7 +412,9 @@ img {
 
 .advantages-image {
   width: calc(100% / 3 * 2);
-  height: inherit;
+  height: auto;
+  object-fit: cover;
+  object-position: right;
 }
 
 .advantages-content {
