@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  min-width: 1280px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -77,7 +78,6 @@ img {
 .btn:hover,
 .btn:focus-visible {
   background-color: #615048;
-  outline: none;
 }
 
 .btn:active {
@@ -128,7 +128,6 @@ img {
 .page-wrapper {
   min-height: 100%;
   max-width: 1200px;
-  min-width: 550px;
   background: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
@@ -413,7 +412,9 @@ img {
 
 .advantages-image {
   width: calc(100% / 3 * 2);
-  height: inherit;
+  height: auto;
+  object-fit: cover;
+  object-position: right;
 }
 
 .advantages-content {
@@ -513,10 +514,6 @@ img {
 .socials-link:hover .socials-icon,
 .socials-link:focus-visible .socials-icon {
   fill: #68a2ca;
-}
-
-.socials-link:focus-visible {
-  outline: none;
 }
 
 .socials-link:active .socials-icon {
@@ -862,7 +859,6 @@ img {
 
 .tooltip-btn:focus-visible {
   background-color: #68a2ca;
-  outline: none;
 }
 
 .modal-tooltip:focus-within .tooltip-text {
@@ -877,6 +873,7 @@ img {
 
 .modal-btn-find:focus-visible {
   box-shadow: 0 0 0 3px #756257;
+  outline: none;
 }
 
 .modal-btn-find:active:not(:disabled) {
@@ -901,7 +898,7 @@ img {
 
 .breadcrumbs {
   list-style: none;
-  margin: 0 0 35px;
+  margin: 0 0 35px -5px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -913,8 +910,8 @@ img {
 }
 
 .breadcrumbs-item:not(:first-child) {
-  padding-left: 5px;
-  background: url("../images/icons/arrow-right.svg") top 50% left no-repeat;
+  padding-left: 10px;
+  background: url("../images/icons/arrow-right.svg") top 50% left 2px no-repeat;
 }
 
 .breadcrumbs-link {
@@ -923,16 +920,12 @@ img {
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
-  padding: 5px 9px 5px 10px;
+  padding: 5px 7px;
 }
 
 .breadcrumbs-icon {
   display: block;
   margin: auto 0;
-}
-
-.breadcrumbs-item:first-child .breadcrumbs-link {
-  padding-left: 2px;
 }
 
 .breadcrumbs-link:not(.breadcrumbs-link-current):hover {
@@ -941,7 +934,6 @@ img {
 
 .breadcrumbs-link:focus-visible {
   color: rgba(255, 255, 255, 0.6);
-  outline: none;
 }
 
 .breadcrumbs-link:not(.breadcrumbs-link-current):active {
@@ -1200,6 +1192,7 @@ img {
 .reset-btn:focus-visible {
   background-color: transparent;
   box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
 }
 
 .reset-btn:active {
@@ -1323,6 +1316,10 @@ img {
 
 .catalog-card-image-link {
   grid-column: span 2;
+}
+
+.catalog-card-image-link:focus {
+  outline: 3px solid #000000;
 }
 
 .catalog-card-image {
@@ -1493,7 +1490,6 @@ img {
 .interactive-decoration-basic:hover,
 .interactive-decoration-basic:focus-visible {
   color: #756157;
-  outline: none;
 }
 
 .interactive-decoration-basic:active {
